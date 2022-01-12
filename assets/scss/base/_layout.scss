@@ -1,0 +1,12 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  @apply py-12;
+}
+
+.container {
+  @apply max-w-7xl px-5 mx-auto;
+}
