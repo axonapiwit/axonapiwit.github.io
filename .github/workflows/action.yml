@@ -1,0 +1,5 @@
+name: CI and CD
+
+on:
+  push:
+    branches: [ main ]
