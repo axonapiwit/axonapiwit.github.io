@@ -8,9 +8,9 @@ body
       li
         a(href="#project") Projects
       li
-        a(href="#") About me
+        a(href="#aboutme") About me
       li
-        a(href="#") Contact
+        a(href="#contact") Contact
       li
         img.w-10.h-10(id="icon" src="~//static/img/play.png")
         audio(id="myAudio")
@@ -30,49 +30,42 @@ body
     h2(id="text") Hi There!
     img.balloon(id="big_balloon" src="~//static/img/balloon.png")
   .sec(id="project")
-    .project.h-full.w-full.flex
+    .project.h-full.w-full
       h3.uppercase.text-white.text-3xl(data-aos="fade-right") project
-      img(id="developer" src="~//static/img/3800.png" data-aos="fade-left")
-      .folders.grid.grid-cols-5.gap-3(data-aos="fade-up")
-        img.file(src="~//static/img/html.png")
-        img.file(src="~//static/img/css.png")
-        img.file(src="~//static/img/js.png")
-        img.file(src="~//static/img/ts.png")
-        img.file(src="~//static/img/vue.png")
-        img.file(src="~//static/img/nuxt.png")
-        img.file(src="~//static/img/flutter.png")
-        img.file(src="~//static/img/firebase.png")
+      //- .folders.grid.grid-cols-4.gap-3(data-aos="fade-up")
+      //-   img(src="~//static/img/html.png")
+      //-   img(src="~//static/img/css.png")
+      //-   img(src="~//static/img/js.png")
+      //-   img(src="~//static/img/ts.png")
+      //-   img(id="developer" src="~//static/img/3800.png" data-aos="fade-left")
+      //-   img(src="~//static/img/vue.png")
+      //-   img(src="~//static/img/nuxt.png")
+      //-   img(src="~//static/img/flutter.png")
+      //-   img(src="~//static/img/firebase.png")
+      .grid.grid-cols-4.gap-3(data-aos="fade-up")
+        .myfolder.relative
+          img#work.right-0(src="~//static/img/0.png")
+          img#folder.absolute.top-8(src="~//static/img/folders.png")
+        .myfolder.relative
+          img#work.right-0(src="~//static/img/3.png")
+          img#folder.absolute.top-8(src="~//static/img/folders.png")
+        .myfolder.relative
+          img#work.right-0(src="~//static/img/5.png")
+          img#folder.absolute.top-8(src="~//static/img/folders.png")
+        .myfolder.relative
+          img#work.right-0(src="~//static/img/0.png")
+          img#folder.absolute.top-8(src="~//static/img/folders.png")
+
 
   section.fullmoon
     img(id="stars_night" src="~//static/img/star_night.png")
-    img(id="moon" src="~//static/img/moon.png"
-      data-aos="fade-up" data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="2000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center")
+    img(id="moon" src="~//static/img/moon.png")
     img(src="~//static/img/land_night.png")
     img.could(id="could" src="~//static/img/could_night.png")
-    img(id="big_balloon_night" src="~//static/img/balloon_night.png"
-      data-aos="fade-right" data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="2000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center")
-    img(id="small_balloon_night" src="~//static/img/balloon_night2.png"
-      data-aos="fade-left" data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="2000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center")
-  .content
-    .block-content.space-y-10
+    img(id="big_balloon_night" src="~//static/img/balloon_night.png")
+    img(id="small_balloon_night" src="~//static/img/balloon_night2.png")
+  .content(id="aboutme")
+    .block-content.space-y-10(data-aos="fade-down")
       .title
         h3.uppercase About Me
         hr
@@ -90,46 +83,67 @@ body
           p <b>Interest</b> : Frontend
       h3.uppercase skill
       hr.info.my-8
-      .grid.grid-cols-1.gap-2
-        p.myskill HTML&CSS - 4 years experience
-        .w-full.bg-gray-200.rounded-full
-          .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%")  75%
-        p.myskill JavaScript - 4 years experience
-        .w-full.bg-gray-200.rounded-full
-          .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%")  50%
-        p.myskill PhotoShop - 7 years experience
-        .w-full.bg-gray-200.rounded-full
-          .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%")  75%
-        p.myskill Figma - 3 years experience
-        .w-full.bg-gray-200.rounded-full
-          .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 65%")  65%
-        p.myskill Wordpress - 3 years experience
-        .w-full.bg-gray-200.rounded-full
-          .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 45%")  45%
-        //- progress(value="0" max="100")
+      .w-full.flex.justify-between
+        .frameworks
+          h3.uppercase frameworks
+          .grid.grid-cols-1.gap-2
+            p.myskill HTML&CSS - 4 years experience
+            .w-full.bg-gray-200.rounded-full
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%")  75%
+            p.myskill JavaScript - 4 years experience
+            .w-full.bg-gray-200.rounded-full
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%")  50%
+        .softs
+          h3.uppercase Soft skill
+          .grid.grid-cols-1.gap-2
+            p Self leanning
+            p Patience
+            p Open-mindedness and adaptability
+            p Critical thinking, creativity, and problem-solving
+            p Accountability, humility, and humbleness
+            p Management (people, time and project)
+            p Teamwork and collaboration
+        .tools
+          h3.uppercase.justify-end tools
+          .grid.grid-cols-1.gap-2
+            p.myskill PhotoShop - 7 years experience
+            .w-full.bg-gray-200.rounded-full
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right")  75%
+            p.myskill Illustrator - 7 years experience
+            .w-full.bg-gray-200.rounded-full
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right")  75%
+            p.myskill Animate - 3 years experience
+            .w-full.bg-gray-200.rounded-full
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%" data-aos="fade-right")  50%
+            p.myskill Figma - 3 years experience
+            .w-full.bg-gray-200.rounded-full
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 65%" data-aos="fade-right")  65%
+            p.myskill Wordpress - 3 years experience
+            .w-full.bg-gray-200.rounded-full
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 45%" data-aos="fade-right")  45%
       h3.uppercase education
       hr.info.my-8
-      .pic.w-full.flex.justify-start.ml-7
-        img.edu-icon(src="~//static/icons/education.png" alt="")
+      .pic.w-full.flex.justify-start.ml-7(data-aos="fade-right")
+        img.edu-icon(src="~//static/icons/education.png")
       .educate.w-full.flex.justify-between
         ul.events
-          li
+          li(data-aos="fade-down")
             time
             span
               strong University of Phayao • Present
               p Software Engineering
-          li
+          li(data-aos="fade-down")
             time
             span
               strong Padad Wittayakom School • 2013 - 2018
               p Sci-Math
       h3.uppercase experience
       hr.info.my-8
-      .pic.w-full.flex.justify-start.ml-6
-        img.edu-icon(src="~//static/icons/experience.png" alt="")
+      .pic.w-full.flex.justify-start.ml-6(data-aos="fade-right")
+        img.edu-icon(src="~//static/icons/experience.png")
       .educate.w-full.flex.justify-between
         ul.events
-          li
+          li(data-aos="fade-down")
             time
             span
               strong OneDee Solution Co., Ltd. • April 2020
@@ -182,6 +196,9 @@ export default ({
       small_balloon.style.left = value * 1.25 + 'px'
       text.style.marginTop = value * 1.5 + 'px'
       header.style.top = value * 0.5 + 'px'
+      big_balloon_night.style.left = value * -0.25 + 'px'
+      small_balloon_night.style.left = value * 0.25 + 'px'
+      moon.style.top = value * -0.25 + 'px'
     })
     var myAudio = document.getElementById("myAudio")
     var icon = document.getElementById("icon")
@@ -195,30 +212,6 @@ export default ({
         myAudio.pause();
         icon.src = "img/play.png"
       }
-    }
-    this.projects()
-    this.animateProgress()
-  },
-  methods: {
-    animateProgress() {
-      this.$anime({
-        targets: 'progress',
-        width: '50%',
-        easing: 'easeInOutQuad',
-        duration: 3000,
-      });
-    },
-    projects() {
-      const anime = this.$anime
-      anime({
-      targets: '.file',
-      scale: [
-        {value: .1, easing: 'easeOutSine', duration: 500},
-        {value: 1, easing: 'easeInOutQuad', duration: 1200}
-      ],
-      delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
-      loop: true,
-    });
     }
   },
 })
@@ -278,6 +271,8 @@ section img#sunset {
 }
 section img#moon {
   @apply mix-blend-screen;
+
+  margin-top: 400px;
 }
 section img#stars_night {
   @apply mix-blend-screen;
@@ -365,12 +360,14 @@ section img#big_balloon {
 .folders img#developer {
   height: 150px;
 }
-/* progress {
+.myfolder img#work {
+  height: 250px;
   margin-left: 10px;
-  position: relative;
-  top: 3px;
-  width: 600px;
-} */
+}
+.myfolder img#folder {
+  height: 150px;
+  margin-top: 80px;
+}
 .block-content {
   @apply text-white;
 
