@@ -14,9 +14,7 @@ body
       li
         img.w-10.h-10(id="icon" src="~//static/img/play.png")
         audio(id="myAudio")
-          source(src="/music/chill by sakura Hz.mp3" type="audio/mp3")
-      li
-        burger-button(:active="isActive" :bar-color="'white'" :bar-height="4" :bar-width="25" @click="isActive = !isActive")
+          source(src="/music/BEAUZ & JVNA - Crazy [NCS Release].mp3" type="audio/mp3")
   section.sunset
     img(id="stars" src="~//static/img/star.png")
     img(id="wind" src="~//static/img/wind.png")
@@ -56,7 +54,6 @@ body
           img#work.right-0(src="~//static/img/0.png")
           img#folder.absolute.top-8(src="~//static/img/folders.png")
 
-
   section.fullmoon
     img(id="stars_night" src="~//static/img/star_night.png")
     img(id="moon" src="~//static/img/moon.png")
@@ -89,10 +86,10 @@ body
           .grid.grid-cols-1.gap-2
             p.myskill HTML&CSS - 4 years experience
             .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%")  75%
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right")  75%
             p.myskill JavaScript - 4 years experience
             .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%")  50%
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%" data-aos="fade-right")  50%
         .softs
           h3.uppercase Soft skill
           .grid.grid-cols-1.gap-2
@@ -154,22 +151,18 @@ body
       .grid.grid-cols-3.gap-4
         .award
           img(src="~//static/certificate/Certificate.jpeg" alt="")
-          p Thailand Online Competitive Programming Contest 2021
+          p TOCPC 2021
         .award
           img(src="~//static/certificate/Figma.jpg" alt="")
           p Web Design (Figma) HACKaTHAILAND
         .award
           img(src="~//static/certificate/FullStack.jpg" alt="")
           p Web App Development HACKaTHAILAND
+  .contactme
 
 </template>
 <script lang="js">
-import BurgerButton from "vue-burger-button";
 export default ({
-  components: {
-    BurgerButton
-  },
-  data: () => ({ isActive: false }),
   mounted() {
     let stars = document.getElementById('stars')
     let left_could = document.getElementById('left_could')
@@ -237,6 +230,10 @@ section.fullmoon {
   min-height: 100vh;
   background: linear-gradient(#000000, #9a09b8);
 }
+.contactme {
+  min-height: 100vh;
+  background: linear-gradient(#29095c, #d6702b);
+}
 section {
   @apply relative w-full flex;
 
@@ -262,6 +259,14 @@ section {
   align-items: center;
   overflow: hidden;
   background: #29095c;
+}
+.contact {
+  @apply relative w-full;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #9a09b8;
 }
 section img#light {
   @apply mix-blend-screen;
@@ -296,6 +301,15 @@ section img#stars_night {
   z-index: 1000;
 }
 .fullmoon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #29095c, transparent);
+  z-index: 1000;
+}
+.content::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -423,5 +437,14 @@ section img#big_balloon {
 .events *::before,
 .events *::after {
   box-sizing: border-box;
+}
+.award {
+  @apply space-y-3;
+}
+.award img {
+  height: 300px;
+}
+.award p {
+  @apply text-center;
 }
 </style>
