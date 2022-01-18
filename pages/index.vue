@@ -14,7 +14,7 @@ body
       li
         img.w-10.h-10(id="icon" src="~//static/img/play.png")
         audio(id="myAudio")
-          source(src="/portfolio/music/BEAUZ & JVNA - Crazy.mp3" type="audio/mp3")
+          source(src="/music/BEAUZ & JVNA - Crazy.mp3" type="audio/mp3")
   section.sunset
     img(id="stars" src="~//static/img/star.png")
     img(id="wind" src="~//static/img/wind.png")
