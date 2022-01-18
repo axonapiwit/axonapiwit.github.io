@@ -6,7 +6,7 @@ body
       li
         a(href="#" class="active") Home
       li
-        a(href="#project") Projects
+        a(href="#projects") Projects
       li
         a(href="#aboutme") About me
       li
@@ -27,9 +27,14 @@ body
     img(id="right_could" src="~//static/img/right_could.png")
     h2(id="text") Hi There!
     img.balloon(id="big_balloon" src="~//static/img/balloon.png")
-  .sec(id="project")
-    .project.h-full.w-full
-      h3.uppercase.text-white.text-3xl(data-aos="fade-right") project
+  .sec(id="projects")
+    .project.h-full.w-full.p-5.space-y-6
+      .flex.justify-between
+        h3.uppercase.text-white.text-3xl(data-aos="fade-right") projects
+        a(href="https://github.com/axonapiwit?tab=repositories" target="_blank" data-aos="fade-left"
+          data-aos-anchor="#trigger-left").justify-end.flex.justify-center.cursor-pointer
+          .bg-black.p-4.rounded-md.h-10.w-32.flex.items-center.justify-center
+            h3.text-white  View More
       //- .folders.grid.grid-cols-4.gap-3(data-aos="fade-up")
       //-   img(src="~//static/img/html.png")
       //-   img(src="~//static/img/css.png")
@@ -40,19 +45,61 @@ body
       //-   img(src="~//static/img/nuxt.png")
       //-   img(src="~//static/img/flutter.png")
       //-   img(src="~//static/img/firebase.png")
-      .grid.grid-cols-4.gap-3(data-aos="fade-up")
-        .myfolder.relative
-          img#work.right-0(src="~//static/img/0.png")
-          img#folder.absolute.top-8(src="~//static/img/folders.png")
-        .myfolder.relative
-          img#work.right-0(src="~//static/img/3.png")
-          img#folder.absolute.top-8(src="~//static/img/folders.png")
-        .myfolder.relative
-          img#work.right-0(src="~//static/img/5.png")
-          img#folder.absolute.top-8(src="~//static/img/folders.png")
-        .myfolder.relative
-          img#work.right-0(src="~//static/img/0.png")
-          img#folder.absolute.top-8(src="~//static/img/folders.png")
+      .works.grid.grid-cols-3.gap-4
+        a(href="https://github.com/axonapiwit/educate_discord_bot" target="_blank" data-aos="fade-up").work.text-white
+          .flex.justify-between.items-center.space-x-3
+            img.folder(src="~//static/img/folder.png")
+            h3.font-bold educate_discord_bot
+          .text-center.space-y-3
+            h3 It is a bot for studying, such as viewing the class schedule, develop by discord js
+            .flex.justify-center.items-center.space-x-3
+              .bg-yellow-300.w-4.h-4.rounded-full
+              h3.text-left JavaScript
+        a(href="https://github.com/axonapiwit/pet_lover" target="_blank" data-aos="fade-down").work.text-white
+          .flex.justify-between.items-center.space-x-3
+            img.folder(src="~//static/img/folder.png")
+            h3.font-bold pet_lover
+          .text-center.space-y-3
+            h3 An application to provide homes for dogs and cats, useing flutter and firebase.
+            .flex.justify-center.items-center.space-x-3
+              .bg-gray-400.w-4.h-4.rounded-full
+              h3.text-left Dart
+        a(href="https://github.com/axonapiwit/flutter_covid-19" target="_blank" data-aos="fade-left").work.text-white
+          .flex.justify-between.items-center.space-x-3
+            img.folder(src="~//static/img/folder.png")
+            h3.font-bold flutter_covid-19
+          .text-center.space-y-3
+            h3 An application that can view the number of Covid-19 infections in Thailand using Sunday API.
+            .flex.justify-center.items-center.space-x-3
+              .bg-gray-400.w-4.h-4.rounded-full
+              h3.text-left Dart
+        a(href="https://github.com/axonapiwit/smartdoc" target="_blank" data-aos="fade-right").work.text-white
+          .flex.justify-between.items-center.space-x-3
+            img.folder(src="~//static/img/folder.png")
+            h3.font-bold smartdoc
+          .text-center.space-y-3
+            h3 Mid-Term work of Mobile Application Development course
+            .flex.justify-center.items-center.space-x-3
+              .bg-gray-400.w-4.h-4.rounded-full
+              h3.text-left Dart
+        a(href="https://github.com/axonapiwit/NestJSProject" target="_blank" data-aos="fade-up").work.text-white
+          .flex.justify-between.items-center.space-x-3
+            img.folder(src="~//static/img/folder.png")
+            h3.font-bold NestJSProject
+          .text-center.space-y-3
+            h3 Homework to practice logic provided by the company during the summer internship
+            .flex.justify-center.items-center.space-x-3
+              .bg-gray-500.w-4.h-4.rounded-full
+              h3.text-left TypeScript
+        a(href="https://github.com/axonapiwit/ClanningServiceWebBooking" target="_blank" id="trigger-left" data-aos="fade-left").work.text-white
+          .flex.justify-between.items-center.space-x-3
+            img.folder(src="~//static/img/folder.png")
+            h3.font-bold ClanningServiceWebBooking
+          .text-center.space-y-3
+            h3 Websites to recruit housewives around the university It is a work of the 1st year.
+            .flex.justify-center.items-center.space-x-3
+              .bg-yellow-700.w-4.h-4.rounded-full
+              h3.text-left HTML
 
   section.fullmoon
     img(id="stars_night" src="~//static/img/star_night.png")
@@ -67,7 +114,7 @@ body
         h3.uppercase About Me
         hr
       .subTitle
-        h1 I'm a <Strong>UI/UX Designer & Frontend Developer</Strong> from Chiangrai, Thailand. I aim to make a difference through my creative solution.
+        h1.text-4xl I'm a <Strong>UI/UX Designer & Frontend Developer</Strong> from Chiangrai, Thailand. I aim to make a difference through my creative solution.
         hr
       .info.my-8
         .grid.grid-cols-2.gap-4
@@ -80,19 +127,58 @@ body
           p <b>Interest</b> : Frontend
       h3.uppercase skill
       hr.info.my-8
-      .w-full.flex.justify-between
-        .frameworks
-          h3.uppercase frameworks
-          .grid.grid-cols-1.gap-2
-            p.myskill HTML&CSS - 4 years experience
-            .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right")  75%
-            p.myskill JavaScript - 4 years experience
-            .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%" data-aos="fade-right")  50%
+      .w-full.grid.grid-cols-3.gap-4
+        .fontend-frameworks
+          h3.uppercase fontend-frameworks
+          .flex.flex-col
+            p.myskill Vue js - 2 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 65%" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500")  65%
+            p.myskill Nuxt js - 2 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 70%" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500")  70%
+        .backend-frameworks
+          h3.uppercase backend-frameworks
+          .flex.flex-col
+            p.myskill Node js - 2 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 70%" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500")  70%
+            p.myskill Nest js - 2 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 60%" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500")  60%
+        .database
+          h3.uppercase database
+          .flex.flex-col
+            p.myskill MySQL - 1 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 65%" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1500")  65%
+            p.myskill Mongo DB - 2 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 70%" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1500")  70%
+            p.myskill Firebase - 2.5 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 60%" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1500")  60%
+        .tools
+          h3.uppercase tools
+          .flex.flex-col
+            p.myskill PhotoShop - 7 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500")  75%
+            p.myskill Illustrator - 7 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500")  75%
+            p.myskill Animate - 3 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500")  50%
+            p.myskill Figma - 3 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 65%" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500")  65%
+            p.myskill Wordpress - 3 years experience
+            .w-full.bg-gray-200.rounded-full(data-aos="fade-right")
+              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 45%" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500")  45%
         .softs
           h3.uppercase Soft skill
-          .grid.grid-cols-1.gap-2
+          .flex.flex-col
             p Self leanning
             p Patience
             p Open-mindedness and adaptability
@@ -100,24 +186,8 @@ body
             p Accountability, humility, and humbleness
             p Management (people, time and project)
             p Teamwork and collaboration
-        .tools
-          h3.uppercase.justify-end tools
-          .grid.grid-cols-1.gap-2
-            p.myskill PhotoShop - 7 years experience
-            .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right")  75%
-            p.myskill Illustrator - 7 years experience
-            .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 75%" data-aos="fade-right")  75%
-            p.myskill Animate - 3 years experience
-            .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 50%" data-aos="fade-right")  50%
-            p.myskill Figma - 3 years experience
-            .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 65%" data-aos="fade-right")  65%
-            p.myskill Wordpress - 3 years experience
-            .w-full.bg-gray-200.rounded-full
-              .bg-gray-600.text-xs.font-medium.text-white.text-center.leading-none.rounded-l-full(class="p-0.5" style="width: 45%" data-aos="fade-right")  45%
+        .other
+
       h3.uppercase education
       hr.info.my-8
       .pic.w-full.flex.justify-start.ml-7(data-aos="fade-right")
@@ -365,22 +435,27 @@ section img#big_balloon {
 .project {
   padding: 50px;
 }
-.folders {
-  @apply left-0 mt-28;
+.folder {
+  @apply h-11;
 }
-.folders img {
-  height: 100px;
+.works {
+  height: 500px;
 }
-.folders img#developer {
-  height: 150px;
+.work {
+  @apply rounded-lg cursor-pointer flex flex-col items-center justify-center space-y-6;
+
+  background: linear-gradient(to bottom, #29095c, transparent);
 }
-.myfolder img#work {
-  height: 250px;
-  margin-left: 10px;
+.work:hover {
+  background: linear-gradient(to top, #d0cdd6, transparent);
 }
-.myfolder img#folder {
-  height: 150px;
-  margin-top: 80px;
+.work:hover h3 {
+  color: #000000;
+}
+&--primary {
+  @include center-v;
+  right: 20px;
+  background: green;
 }
 .block-content {
   @apply text-white;
