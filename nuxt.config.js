@@ -13,7 +13,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
     script: [
       {
@@ -29,7 +29,7 @@ export default {
   css: ["aos/dist/aos.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/styles.js'},'@/plugins/nuxt-plyr',{ src: "~/plugins/aos", ssr: false },{ src: '~/plugins/vue-burguer-button.js' }],
+  plugins: [{ src: '~/plugins/styles.js'},'@/plugins/nuxt-plyr',{ src: "~/plugins/aos", ssr: false },{ src: '~/plugins/vue-burguer-button.js' },{ src: '~/plugins/vue-typer.js', mode: 'client' },{ src: '~/plugins/fontawesome.js' },],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -39,6 +39,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     'nuxt-animejs',
+    '@nuxtjs/fontawesome'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
