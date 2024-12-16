@@ -3,20 +3,25 @@ import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-const WaveDots = () => {
-  const ref = useRef<THREE.InstancedMesh>(null);
-  const rows = 50; // Number of rows
-  const cols = 100; // Number of columns
-  const dotSize = 0.15; // Size of each dot
-  const gap = 0.4; // Gap between dots
-
-  // Generate positions for the dots
+// Generate positions for the dots (static)
+const generatePositions = (rows: number, cols: number, gap: number) => {
   const positions: [number, number, number][] = [];
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
       positions.push([(j - cols / 2) * gap, 0, (i - rows / 2) * gap]); // Center the grid
     }
   }
+  return positions;
+};
+
+const rows = 50; // Number of rows
+const cols = 100; // Number of columns
+const gap = 0.4; // Gap between dots
+const positions = generatePositions(rows, cols, gap); // Pre-calculate positions
+
+const WaveDots = () => {
+  const ref = useRef<THREE.InstancedMesh>(null);
+  const dotSize = 0.15; // Size of each dot
 
   // Animation loop
   useFrame(({ clock }) => {
