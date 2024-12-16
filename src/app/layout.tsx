@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import FireFliesBackground from "@/components/FireFliesBackground";
+// import FireFliesBackground from "@/components/FireFliesBackground";
 import WindBackground from "@/components/WindBackground";
 
 const geistSans = localFont({
