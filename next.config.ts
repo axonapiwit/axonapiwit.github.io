@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export', // Enable static export
-  basePath: '/axonapiwit.github.io',
+  basePath: isProd ? '/axonapiwit.github.io' : '',
+  output: 'export',
+  images : {
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
